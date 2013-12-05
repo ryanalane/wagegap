@@ -15,23 +15,53 @@ html, body {
 }
 
 .people {
-    margin: 0 auto;
+    margin: 10px auto 30px auto;
 
     table {
         margin: 0 auto;
+        border-collapse: separate;
 
         tr {
-            padding: 0;
+            td {
+                font-size: 36px;
+                border: 1px solid transparent;
+                position: relative;
+                z-indez: 0;
+                color: rgba(0,0,0,0.6);
 
-            td.left {
-                width: 300px;
-                text-align: right;
-                padding-right: 5px;
-            }
-            td.right {
-                width: 300px;
-                text-align: left;
-                padding-left: 10px;
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &.selected {
+                    font-size: 36px;
+                    z-index: 1;
+                    border: 1px solid black;
+                    color: rgba(0,0,0,1);
+
+                    @time: 0.75s;
+                    -webkit-transition: all @time ease;
+                    -moz-transition: all @time ease;
+                    -o-transition: all @time ease;
+                    transition: all @time ease;
+                }
+
+                &.left {
+                    width: 300px;
+                    text-align: right;
+                    padding-right: 5px;
+                }
+
+                &.right {
+                    width: 300px;
+                    text-align: left;
+                    padding-left: 10px;
+
+                    &.selected {
+                        color: white;
+                        background: black;
+                    }
+                }
             }
         }
 
