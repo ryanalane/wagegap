@@ -12,6 +12,25 @@ body {
   /* Pad bottom by footer height */
   padding: 0 0 60px;
 }
+.people {
+  margin: 0 auto;
+}
+.people table {
+  margin: 0 auto;
+}
+.people table tr {
+  padding: 0;
+}
+.people table tr td.left {
+  width: 300px;
+  text-align: right;
+  padding-right: 5px;
+}
+.people table tr td.right {
+  width: 300px;
+  text-align: left;
+  padding-left: 10px;
+}
 .chart {
   height: 400px;
   margin: 0 auto;
