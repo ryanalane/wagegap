@@ -1,0 +1,41 @@
+html,
+body {
+  text-align: center;
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+.chart {
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+.chart div {
+  font: 15px sans-serif;
+  background-color: black;
+  text-align: center;
+  padding: 3px;
+  color: white;
+  border: 1px red solid;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+}
+.footer {
+  font: 15px Georgia;
+  padding: 20px 0;
+  height: 60px;
+  background: #f4f8cf;
+}
+.footer a {
+  font: 12px Georgia;
+}
