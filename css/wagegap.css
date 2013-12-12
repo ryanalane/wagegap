@@ -1,0 +1,117 @@
+html,
+body {
+  text-align: center;
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+.people {
+  margin: 10px auto 30px auto;
+}
+.people table {
+  margin: 0 auto;
+  border-collapse: separate;
+}
+.people table tr td {
+  font-size: 36px;
+  border: 1px solid transparent;
+  position: relative;
+  z-indez: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+.people table tr td:hover {
+  cursor: pointer;
+}
+.people table tr td.empty:hover {
+  cursor: auto;
+}
+.people table tr td.selected {
+  font-size: 36px;
+  z-index: 1;
+  border: 1px solid black;
+  color: #000000;
+  -webkit-transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease;
+  -o-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+}
+.people table tr td.left {
+  width: 300px;
+  text-align: right;
+  padding-right: 5px;
+}
+.people table tr td.right {
+  width: 300px;
+  text-align: left;
+  padding-left: 10px;
+}
+.people table tr td.right.selected {
+  color: white;
+  background: black;
+}
+.explanatory-text.left,
+.explanatory-text.right {
+  height: 400px;
+  position: relative;
+}
+.explanatory-text.left {
+  text-align: right;
+}
+.explanatory-text.left p {
+  font: 24px Helvetica;
+  font-weight: bold;
+  margin: 0;
+  line-height: 400px;
+}
+.explanatory-text.right {
+  text-align: left;
+}
+.explanatory-text.right p {
+  font: 20px Helvetica;
+  text-align: center;
+  padding: 1.25em 1.5em 1.25em 1.5em;
+  background: #9ac797;
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  height: 90px;
+}
+.explanatory-text.right p strong {
+  padding: 5px;
+  background: white;
+}
+.chart-container .chart {
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+.chart-container .chart div {
+  font: 30px sans-serif;
+  background-color: black;
+  text-align: center;
+  padding: 3px;
+  color: white;
+  border: 1px black solid;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+}
+.footer {
+  font: 15px Georgia;
+  padding: 20px 0;
+  height: 60px;
+  background: #9ac797;
+}
+.footer a {
+  font: 12px Georgia;
+  color: #b53533;
+}
