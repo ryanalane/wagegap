@@ -53,13 +53,13 @@ body {
   color: white;
   background: black;
 }
-.chart {
+.chart-container .chart {
   height: 400px;
   margin: 0 auto;
   position: relative;
 }
-.chart div {
-  font: 15px sans-serif;
+.chart-container .chart div {
+  font: 30px sans-serif;
   background-color: black;
   text-align: center;
   padding: 3px;
