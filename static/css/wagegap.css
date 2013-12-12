@@ -29,6 +29,9 @@ body {
 .people table tr td:hover {
   cursor: pointer;
 }
+.people table tr td.empty:hover {
+  cursor: auto;
+}
 .people table tr td.selected {
   font-size: 36px;
   z-index: 1;
@@ -53,6 +56,37 @@ body {
   color: white;
   background: black;
 }
+.explanatory-text.left,
+.explanatory-text.right {
+  height: 400px;
+  position: relative;
+}
+.explanatory-text.left {
+  text-align: right;
+}
+.explanatory-text.left p {
+  font: 24px Helvetica;
+  font-weight: bold;
+  margin: 0;
+  line-height: 400px;
+}
+.explanatory-text.right {
+  text-align: left;
+}
+.explanatory-text.right p {
+  font: 20px Helvetica;
+  text-align: center;
+  padding: 1.25em 1.5em 1.25em 1.5em;
+  background: #9ac797;
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  height: 90px;
+}
+.explanatory-text.right p strong {
+  padding: 5px;
+  background: white;
+}
 .chart-container .chart {
   height: 400px;
   margin: 0 auto;
@@ -64,7 +98,7 @@ body {
   text-align: center;
   padding: 3px;
   color: white;
-  border: 1px red solid;
+  border: 1px black solid;
   width: 100px;
   position: absolute;
   bottom: 0;
@@ -75,8 +109,9 @@ body {
   font: 15px Georgia;
   padding: 20px 0;
   height: 60px;
-  background: #f4f8cf;
+  background: #9ac797;
 }
 .footer a {
   font: 12px Georgia;
+  color: #b53533;
 }

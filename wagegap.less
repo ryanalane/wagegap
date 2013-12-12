@@ -3,7 +3,11 @@ html, body {
     height: 100%;
 }
 
+@chart_height: 400px;
+@green_background: rgb(170, 199, 137);
+@green_background: rgb(154, 199, 151);
 @footer_height: 60px;
+
 #wrap {
     min-height: 100%;
     height: auto !important;
@@ -32,6 +36,11 @@ html, body {
                 &:hover {
                     cursor: pointer;
                 }
+
+                &.empty:hover {
+                    cursor: auto;
+                }
+
 
                 &.selected {
                     font-size: 36px;
@@ -68,9 +77,50 @@ html, body {
     }
 }
 
+.explanatory-text {
+
+    &.left, &.right {
+        height: @chart_height;
+        position: relative;
+    }
+
+    &.left {
+        text-align: right;
+
+        p {
+            font: 24px Helvetica;
+            font-weight: bold;
+            margin: 0;
+            line-height: @chart_height;
+        }
+    }
+
+    &.right {
+        text-align: left;
+
+        p {
+            strong {
+                padding: 5px;
+                background: white;
+            }
+            @explain_height: 90px;
+            font: 20px Helvetica;
+            text-align: center;
+            padding: 1.25em 1.5em 1.25em 1.5em;
+            background: @green_background;
+            position: absolute;
+            top: 50%;
+            margin-top: -(@explain_height / 2);
+            height: @explain_height;
+        }
+    }
+
+
+}
+
 .chart-container {
     .chart {
-        height: 400px;
+        height: @chart_height;
         margin: 0 auto;
         position: relative;
 
@@ -80,7 +130,7 @@ html, body {
             text-align: center;
             padding: 3px;
             color: white;
-            border: 1px red solid;
+            border: 1px black solid;
             width: 100px;
             position: absolute;
             bottom: 0;
@@ -94,9 +144,10 @@ html, body {
     font: 15px Georgia;
     padding: @footer_height/3 0;
     height: @footer_height;
-    background: rgb(244, 248, 207);
+    background: @green_background;
 
     a {
         font: 12px Georgia;
+        color: rgb(181, 53, 51);
     }
 }
